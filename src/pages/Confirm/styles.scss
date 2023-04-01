@@ -1,0 +1,45 @@
+.confirm-page {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .title {
+    margin: 35px 0 15px;
+    font-size: 35px;
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 25px;
+    color: hsl(231, 11%, 63%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .text {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    height: 450px;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+  }
+}

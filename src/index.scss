@@ -1,0 +1,28 @@
+@import './assets/fonts/fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: rgba(191, 226, 253, 0.3);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  font-family: 'Ubuntu', sans-serif;
+  border: none;
+  cursor: pointer;
+}

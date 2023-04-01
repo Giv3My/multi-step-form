@@ -1,0 +1,107 @@
+.summary {
+  padding: 25px;
+  background-color: rgba(191, 226, 253, 0.15);
+  border-radius: 8px;
+
+  .plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .selected-plan {
+      .title {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        color: hsl(213, 96%, 18%);
+      }
+
+      .change-link {
+        color: hsl(231, 11%, 63%);
+        text-decoration: underline 1.5px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: hsl(243, 100%, 62%);
+          transition: all 0.2s ease;
+        }
+      }
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 700;
+      color: hsl(213, 96%, 18%);
+    }
+  }
+
+  .addons {
+    margin-top: 20px;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-bottom: 20px;
+      border-top: 1px solid hsl(229, 24%, 87%);
+    }
+
+    .selected-addon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      .title {
+        font-size: 16px;
+        color: hsl(231, 11%, 63%);
+      }
+
+      .price {
+        font-size: 16px;
+        color: hsl(213, 96%, 18%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .plan {
+      .selected-plan {
+        .title {
+          font-size: 16px;
+        }
+      }
+
+      .price {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.total-price {
+  padding: 0 25px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .period {
+    font-size: 16px;
+    color: hsl(231, 11%, 63%);
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(243, 100%, 62%);
+  }
+
+  @media screen and (max-width: 425px) {
+    .price {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.plan-card-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px 0;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    max-height: 270px;
+    overflow-y: auto;
+  }
+}
+
+.choose-period {
+  margin-top: 30px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 30px;
+  border-radius: 8px;
+  background-color: rgba(191, 226, 253, 0.15);
+
+  .period-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(231, 11%, 63%);
+    transition: all 0.2s ease;
+
+    &.active {
+      color: hsl(213, 96%, 18%);
+      transition: all 0.2s ease;
+    }
+  }
+
+  .toggle-period {
+    min-width: 50px;
+    height: 25px;
+    border-radius: 16px;
+    background-color: hsl(213, 96%, 18%);
+    cursor: pointer;
+
+    .toggle-wrapper {
+      padding: 4px;
+
+      .switch {
+        width: 16px;
+        height: 16px;
+        transform: translateX(0);
+        border-radius: 50%;
+        background-color: #fff;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &.checked {
+      .switch {
+        transform: translateX(26px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 15px;
+    gap: 0 5%;
+  }
+
+  @media screen and (max-width: 425px) {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    gap: 0 5px;
+
+    .period-name {
+      margin: auto;
+    }
+  }
+}

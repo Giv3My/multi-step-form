@@ -1,0 +1,85 @@
+.plan-card {
+  width: 140px;
+  height: 160px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &.active {
+    border-color: hsl(243, 100%, 62%);
+    background-color: rgba(191, 226, 253, 0.15);
+  }
+
+  &.offer {
+    height: 180px;
+
+    .plan-info {
+      .plan-offer {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &:hover {
+    border-color: hsl(243, 100%, 62%);
+    transition: all 0.2s ease;
+  }
+
+  .plan-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .plan-info {
+    margin-top: 40px;
+
+    .plan-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: hsl(213, 96%, 18%);
+    }
+
+    .plan-price {
+      margin: 7px 0;
+      color: hsl(231, 11%, 63%);
+    }
+
+    .plan-offer {
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      font-size: 14px;
+      color: hsl(213, 96%, 18%);
+      transition: all 0.2s ease;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &.offer {
+      height: 100px;
+    }
+
+    .plan-info {
+      margin: 0;
+      margin-left: 15px;
+    }
+  }
+}

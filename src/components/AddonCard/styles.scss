@@ -1,0 +1,99 @@
+.addon-card {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    border-color: hsl(243, 100%, 62%);
+  }
+
+  .checkmark {
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid hsl(229, 24%, 87%);
+    user-select: none;
+    transition: all 0.2s ease-out;
+
+    img {
+      width: 12px;
+      height: 9px;
+    }
+  }
+
+  .addon-card-info {
+    margin-left: 30px;
+    margin-right: auto;
+
+    .addon-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: hsl(213, 96%, 18%);
+    }
+
+    .addon-desc {
+      margin-top: 7px;
+      color: hsl(231, 11%, 63%);
+    }
+  }
+
+  .addon-card-price {
+    p {
+      font-size: 15px;
+      color: hsl(243, 100%, 62%);
+    }
+  }
+
+  &.active {
+    background-color: rgba(191, 226, 253, 0.15);
+    border-color: hsl(243, 100%, 62%);
+
+    .checkmark {
+      background-color: hsl(243, 100%, 62%);
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 15px 20px;
+
+    .addon-card-info {
+      margin-left: 5%;
+
+      .addon-title {
+        font-size: 16px;
+      }
+
+      .addon-desc {
+        font-size: 14px;
+      }
+    }
+
+    .addon-card-price {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 15px;
+
+    .addon-card-info {
+      .addon-desc {
+        font-size: 13px;
+      }
+    }
+  }
+}
